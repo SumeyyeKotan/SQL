@@ -1,3 +1,4 @@
+-- 1)Invoice tablosunda “USA” ülkesine ait, 2009 yılı içerisinde oluşturulmuş tüm faturaların toplamını listeleyen bir sorgu yazınız. 
 Select * from invoice
 
 SELECT SUM(total)
@@ -12,6 +13,9 @@ EXTRACT komutu ile 2009 olan değerleri ayıkladık,
 SUM komutu ile total kolonunun değerini topladık.
 */
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- 2)Track tablosundaki tüm parça bilgilerini, bu parçaların ait olduğu playlisttrack ve playlist tablolarıyla birleştirerek (JOIN) listeleyen bir sorgu yazınız. 
 Select * from track
 Select * from playlisttrack
 Select * from playlist
@@ -27,7 +31,10 @@ JOIN playlist p ON pt.playlist_id = p.playlist_id;
 
 --JOIN ile tablolar verilen kolonlar üzerinden birleştirdik.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+-- 3)Track tablosundan "Let There Be Rock" adlı albüme ait tüm parçaları listeleyen, 
+-- sanatçı (Artist) bilgisini de içeren bir sorgu yazınız. Ayrıca, sonuçları parça süresi (milliseconds) büyükten küçüğe sıralayınız. 
 Select * from track
 Select * from album
 Select * from artist
@@ -52,4 +59,3 @@ olan değerleri seçeçerek JOIN ile tabloları
 verilen kolonlar üzerinden birleştirdik.
 Parça süresine göre, DESC komutu kullanak azalan yönde ORDER BY ile sıraladık.
 */
-
