@@ -17,10 +17,10 @@ Select * from playlisttrack
 Select * from playlist
 
 SELECT
-    t.*,						--bu ifade ile track tablosundaki tüm kolonları seçtik.
+    t.*,					--bu ifade ile track tablosundaki tüm kolonları seçtik.
     pt.playlist_id,				--bu ifade ile playlisttrack tablosundaki playlist_id kolonunu seçtik
-    p.name AS playlist_type		--bu ifade, playlist tablosundaki name kolonunu seçtik 
-								--ve playlist_type olarak adlandırdık.
+    p.name AS playlist_type			--bu ifade, playlist tablosundaki name kolonunu seçtik 
+						--ve playlist_type olarak adlandırdık.
 FROM track t
 JOIN playlisttrack pt ON t.track_id = pt.track_id  	 
 JOIN playlist p ON pt.playlist_id = p.playlist_id;
